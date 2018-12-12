@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row mar-top">
+		<div class="col-md-10 col-md-offset-1">
+			<h1>Upcoming Workshops</h1>
+			<p></p>
+			<table class="table table-striped table-hover">
+				<tr>
+					<th>Upcoming Workshop</th>
+					<th>Date</th>
+					<th style="text-align:right;"><a href="/admin/new" class="btn btn-success btn-xs">New</a></th>
+				</tr>
+				<% @workshops.upcoming.sort{|a,b| b.start_date <=> a.start_date}.each do |w| %>
+				<tr>
+					<td><%= w.venue %></td>
+					<td>
+						<%= format_day w.start_date %>
+						<% unless w.start_date == w.end_date %>
+						 - <%= format_day w.end_date %>
+						<% end %>
+					</td>
+					<td style="text-align:right;"><a href="/admin/<%= w.id %>/edit" class="btn btn-default btn-xs">Edit</a>&nbsp;&nbsp;&nbsp;<a href="/admin/<%= w.id %>/delete" class="btn btn-default btn-xs delete">Delete</a></td>
+				</tr>
+				<% end %>
+			</table>
+			<br />
+			<a href="/admin/expired" class="btn btn-success btn-xs">View expired Workshops</a>
+		</div>
+	</div>
+</div>
