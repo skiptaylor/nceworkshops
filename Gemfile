@@ -21,3 +21,4 @@ gem 'dm-postgres-adapter', '~> 1.2.0', group: :production
 gem 'kramdown', '~> 2.3.1'
 gem 'pony', '~> 1.4'
 gem 'rake', '~> 12.3.3'
+gem 'rack', '~> 2.2', '>= 2.2.3'
