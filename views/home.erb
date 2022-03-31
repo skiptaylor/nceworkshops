@@ -44,9 +44,9 @@
 						<div id="<%= w.id %>" class="panel-collapse collapse">
 							<div class="panel-body">
 								<h3 style="font-weight: 800;"><%= w.venue %></h3>
-								<p><%= Kramdown::Document.new(w.description).to_html %></p>
-								<%= Kramdown::Document.new(w.price1).to_html %>
-								<p><%= Kramdown::Document.new(w.time).to_html %></p>
+								<p><%= w.description %></p>
+								<%= w.price1 %>
+								<p><%= w.time %></p>
 								<p><strong><%= w.location %></strong><br />
 									<small><%= w.address1 %>&nbsp; <%= w.city %>&nbsp; <%= w.state %>&nbsp; <%= w.zip %></small></p>
 								</p>
@@ -74,9 +74,9 @@
 						<div id="<%= w.id %>" class="panel-collapse collapse">
 							<div class="panel-body">
 								<h3 style="font-weight: 800;"><%= w.venue %></h3>
-								<p><%= Kramdown::Document.new(w.description).to_html %></p>
-								<%= Kramdown::Document.new(w.price1).to_html %>
-								<p><%= Kramdown::Document.new(w.time).to_html %></p>
+								<p><%= w.description %></p>
+								<%= w.price1 %>
+								<p><%= w.time %></p>
 								<p><strong><%= w.location %></strong><br />
 									<small><%= w.address1 %>&nbsp; <%= w.city %>&nbsp; <%= w.state %>&nbsp; <%= w.zip %></small></p>
 								</p>
